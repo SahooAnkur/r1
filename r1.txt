@@ -1,0 +1,11 @@
+#!/bin/bash
+apt-get update
+apt-get install -y nginx
+systemctl start nginx
+systemctl enable nginx
+curl -sl https://deb.nodesource.com/setup_18.x | sudo -E bash -
+apt-get install -y nodejs
+git clone https://github.com/SahooAnkur/whatsInTheName.git
+cd whatsInTheName
+npm install
+node index.js
